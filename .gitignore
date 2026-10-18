@@ -1,0 +1,6 @@
+# secrets: never committed
+.env
+claude-run/work/
+node_modules/
+__pycache__/
+*.blend1
