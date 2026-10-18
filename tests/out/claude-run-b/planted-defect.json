@@ -1,0 +1,48 @@
+2026-10-18 16:30:03,626 - BlenderMCPServer - INFO - BlenderMCP server starting up
+2026-10-18 16:30:03,628 - BlenderMCPServer - INFO - Blender addon on disk is current (protocol 13).
+2026-10-18 16:30:03,630 - BlenderMCPServer - INFO - Connected to Blender at localhost:9876
+2026-10-18 16:30:03,630 - BlenderMCPServer - INFO - Created new persistent connection to Blender
+2026-10-18 16:30:03,630 - BlenderMCPServer - INFO - Sending command: get_addon_info with params: None
+2026-10-18 16:30:03,631 - BlenderMCPServer - INFO - Command sent, waiting for response...
+2026-10-18 16:30:03,668 - BlenderMCPServer - INFO - Received complete response (469 bytes)
+2026-10-18 16:30:03,669 - BlenderMCPServer - INFO - Received 469 bytes of data
+2026-10-18 16:30:03,669 - BlenderMCPServer - INFO - Response parsed, status: success
+2026-10-18 16:30:03,670 - BlenderMCPServer - INFO - Blender addon up to date (protocol 13, addon [1, 8], Blender 5.2.2 LTS)
+2026-10-18 16:30:03,670 - BlenderMCPServer - INFO - Sending command: get_telemetry_consent with params: None
+2026-10-18 16:30:03,670 - BlenderMCPServer - INFO - Command sent, waiting for response...
+2026-10-18 16:30:03,720 - BlenderMCPServer - INFO - Received complete response (51 bytes)
+2026-10-18 16:30:03,720 - BlenderMCPServer - INFO - Received 51 bytes of data
+2026-10-18 16:30:03,720 - BlenderMCPServer - INFO - Response parsed, status: success
+2026-10-18 16:30:03,721 - BlenderMCPServer - INFO - Successfully connected to Blender on startup
+2026-10-18 16:30:03,725 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2026-10-18 16:30:03,726 - BlenderMCPServer - INFO - MCP client blender-spike 0: extensions=[], apps=False, openai_forms=False
+2026-10-18 16:30:03,729 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2026-10-18 16:30:03,730 - BlenderMCPServer - INFO - Sending command: execute_code with params: {'code': 'import bpy\nw=[o for o in bpy.data.objects if "wheel" in o.name.lower()]\nw.sort(key=lambda o:o.name)\nprint("LIFTED", w[0].name if w else None)\nif w: w[0].location.z += 0.6'}
+2026-10-18 16:30:03,733 - BlenderMCPServer - INFO - Command sent, waiting for response...
+2026-10-18 16:30:03,771 - BlenderMCPServer - INFO - Received complete response (87 bytes)
+2026-10-18 16:30:03,772 - BlenderMCPServer - INFO - Received 87 bytes of data
+2026-10-18 16:30:03,772 - BlenderMCPServer - INFO - Response parsed, status: success
+{
+  "serverInfo": {
+    "name": "MCP for Blender",
+    "version": "1.30.0"
+  },
+  "tools": [
+    "get_addon_status",
+    "disable_telemetry",
+    "get_scene_info",
+    "execute_blender_code",
+    "record_trajectory_feedback",
+    "look",
+    "generate_3d",
+    "search_assets",
+    "import_asset"
+  ],
+  "tools_json_chars": 16796,
+  "call": {
+    "tool": "execute_blender_code",
+    "isError": false,
+    "text": "Code executed successfully: LIFTED Rover_Wheel_1\n",
+    "error": null
+  }
+}

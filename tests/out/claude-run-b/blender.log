@@ -1,0 +1,31 @@
+GHOST/Wayland: error: XDG_RUNTIME_DIR is invalid or not set in the environment.
+blender() [0x10e512d]
+blender() [0x10e5293]
+/lib/x86_64-linux-gnu/libwayland-client.so.0(+0xb94a) [0x7ba28e6dd94a]
+/lib/x86_64-linux-gnu/libwayland-client.so.0(wl_display_connect+0x2d2) [0x7ba28e6d9b02]
+blender() [0x1a782e7]
+blender() [0x1a577bd]
+blender() [0x16cb341]
+blender() [0x16a27e5]
+blender() [0x75f8eb]
+/lib/x86_64-linux-gnu/libc.so.6(+0x2724a) [0x7ba2b958a24a]
+/lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0x85) [0x7ba2b958a305]
+blender() [0x78994e]
+BlenderMCP addon registered
+Traceback (most recent call last):
+  File "/root/.config/blender/5.2/scripts/addons/blender_mcp.py", line 2248, in execute_code
+    exec(code, namespace)
+    ~~~~^^^^^^^^^^^^^^^^^
+  File "<string>", line 20, in <module>
+AttributeError: 'Action' object has no attribute 'fcurves'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/.config/blender/5.2/scripts/addons/blender_mcp.py", line 1577, in _execute_command_internal
+    result = handler(**params)
+  File "/root/.config/blender/5.2/scripts/addons/blender_mcp.py", line 2258, in execute_code
+    raise Exception(
+    ...<5 lines>...
+    )
+Exception: {"exception_type": "AttributeError", "message": "'Action' object has no attribute 'fcurves'", "traceback": "Traceback (most recent call last):\n  File \"/root/.config/blender/5.2/scripts/addons/blender_mcp.py\", line 2248, in execute_code\n    exec(code, namespace)\n    ~~~~^^^^^^^^^^^^^^^^^\n  File \"<string>\", line 20, in <module>\nAttributeError: 'Action' object has no attribute 'fcurves'\n"}

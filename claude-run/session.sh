@@ -9,7 +9,8 @@ mkdir -p "$OUT"
 export DISPLAY=:99
 Xvfb :99 -screen 0 1920x1080x24 >"$OUT/xvfb.log" 2>&1 &
 sleep 2
-mcp-for-blender install-addon >/dev/null 2>&1
+# setup = install AND enable the add-on (install-addon alone only copies it: run A failed that way, 18 Oct)
+mcp-for-blender setup < /dev/null > "$OUT/setup.txt" 2>&1
 # light theme (the channel's rule) and no splash; nothing saved to the user's preferences
 cat > /tmp/look.py <<'PY'
 import bpy, os
@@ -19,6 +20,9 @@ bpy.context.preferences.view.show_splash = False
 PY
 blender --python /tmp/look.py >"$OUT/blender.log" 2>&1 &
 for i in $(seq 1 60); do (echo > /dev/tcp/127.0.0.1/9876) 2>/dev/null && break; sleep 1; done
+# no session unless the add-on server is really up
+(echo > /dev/tcp/127.0.0.1/9876) 2>/dev/null || { echo "STOP: Blender add-on server not on 9876 after 60 s" | tee "$OUT/STOPPED.txt"; exit 3; }
+echo "port 9876 open after ${i}s" > "$OUT/port.txt"
 sleep 4
 WID=$(xdotool search --name "Blender" | head -1); xdotool windowactivate --sync "$WID" 2>/dev/null
 xdotool key Escape; sleep 1; xdotool mousemove 800 500; xdotool key n; sleep 1; xdotool mousemove 1562 350 click 1; sleep 1

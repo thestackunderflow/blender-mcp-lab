@@ -37,7 +37,9 @@ def shorten_images(msg, png_dir):
         if c.get("type") == "image" and isinstance(c.get("data"), str):
             raw = base64.b64decode(c["data"])
             shots += 1
-            name = f"claude-shot-{shots:02d}.png"
+            # Unique across proxy processes: one session starts a new proxy per prompt, and a plain counter
+            # restarted at 01 and overwrote earlier screenshots (Blender run B, 18 Oct 2026). Time + content hash.
+            name = f"claude-shot-{now().replace(':', '').replace('-', '')[:15]}-{hashlib.sha256(raw).hexdigest()[:8]}.png"
             if png_dir:
                 with open(os.path.join(png_dir, name), "wb") as f:
                     f.write(raw)
