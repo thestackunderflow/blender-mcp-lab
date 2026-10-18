@@ -21,4 +21,7 @@ ENV UV_INSTALL_DIR=/usr/local/bin
 RUN curl -LsSf https://astral.sh/uv/0.9.2/install.sh | sh && uv --version
 RUN uv tool install mcp-for-blender==2.1.9 && ln -s /root/.local/bin/mcp-for-blender /usr/local/bin/mcp-for-blender 2>/dev/null; \
     ls /root/.local/bin
+# Claude Code, the same version as on the owner's PC (official installer, pinned). It signs in with the owner's
+# subscription token from the git-ignored .env (CLAUDE_CODE_OAUTH_TOKEN), passed at run time, never baked in.
+RUN curl -fsSL https://claude.ai/install.sh | bash -s 2.1.302 && ln -sf /root/.local/bin/claude /usr/local/bin/claude && claude --version
 WORKDIR /work
