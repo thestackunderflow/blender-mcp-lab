@@ -1,0 +1,1 @@
+Installed MCP for Blender addon to /root/.config/blender/5.2/scripts/addons/blender_mcp.py. In Blender: Preferences → Add-ons → disable then enable 'Interface: MCP for Blender', or restart Blender, then click Start MCP Server.

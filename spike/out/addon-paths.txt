@@ -1,0 +1,4 @@
+/root/.config/blender/5.2/scripts/addons (exists)
+
+Existing MCP for Blender installs:
+  /root/.config/blender/5.2/scripts/addons/blender_mcp.py

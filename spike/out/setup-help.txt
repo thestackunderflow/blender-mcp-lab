@@ -1,0 +1,7 @@
+usage: mcp-for-blender setup [-h] [--dry-run] [--yes] [--skip-addon]
+
+options:
+  -h, --help    show this help message and exit
+  --dry-run     Show what would change without changing anything
+  --yes, -y     Configure every client found without asking
+  --skip-addon  Configure clients only; leave Blender alone

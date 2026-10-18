@@ -1,0 +1,24 @@
+{
+  "serverInfo": {
+    "name": "MCP for Blender",
+    "version": "1.30.0"
+  },
+  "tools": [
+    "get_addon_status",
+    "disable_telemetry",
+    "get_scene_info",
+    "execute_blender_code",
+    "record_trajectory_feedback",
+    "look",
+    "generate_3d",
+    "search_assets",
+    "import_asset"
+  ],
+  "tools_json_chars": 16796,
+  "call": {
+    "tool": "get_scene_info",
+    "isError": false,
+    "text": "Scene 'Scene' | 1 camera, 1 light, 1 mesh | active Cube | selected Cube | mode OBJECT\n\nShowing 3 of 3 (name | type | location | size | hidden | children):\nCube | mesh | at (0.0, 0.0, 0.0) | size 2.0x2.0x2.0\nLight | light | at (4.08, 1.01, 5.9)\nCamera | camera | at (7.36, -6.93, 4.96)",
+    "error": null
+  }
+}
