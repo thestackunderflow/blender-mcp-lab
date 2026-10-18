@@ -1,0 +1,15 @@
+MCP for Blender setup
+
+Found:
+  Claude Code  will add
+
+  ✓ Claude Code: Added "blender" (user scope, all projects)
+
+Blender addon:
+  Installed the addon to /root/.config/blender/5.2/scripts/addons/blender_mcp.py
+  Enabled the addon in Blender
+
+Next:
+  • Start a new Claude Code session.
+  • Open Blender. The addon starts its server on launch (MCP for Blender tab, press N).
+  • Then ask your assistant to build something in Blender.

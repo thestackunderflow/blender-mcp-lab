@@ -14,8 +14,9 @@
 | Screen recording | ffmpeg x11grab, 30 fps, 5 s test OK | `out/04-recording-test.mp4` |
 
 Things the video should mention neutrally: the panel also shows a "Get Premium" upsell for AI model generation,
-a "Join Discord" button and an "up to date" check (the add-on contacts the internet for updates). Telemetry is opt-in
-per the source (`consent_prompt.py`: "v2: telemetry became opt-in"); a lab test will check nothing is sent by default.
+a "Join Discord" button and an "up to date" check (the add-on contacts the internet for updates). CORRECTION (18 Oct, fact-check of run B): only CONTENT collection (prompts, code, screenshots) is opt-in. A minimal
+anonymous usage record IS sent by default (README: "What is collected by default (no opt-in)"); run B logged 18 POSTs
+to the telemetry endpoint ("201 Created") with the consent prompt cancelled. DISABLE_TELEMETRY=true turns it off.
 
 Still open (need the owner's Claude Code token in `.env`): Claude Code inside the container, the real session
 ("what's in my scene?", "make the cube blue", the rover), and recording `setup` with Claude Code detected.

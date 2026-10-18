@@ -1,0 +1,25 @@
+total 1516
+drwxrwxrwx 1 root root    4096 Oct 18  2026 .
+drwxrwxrwx 1 root root    4096 Oct 18 16:26 ..
+-rw-r--r-- 1 root root  252016 Oct 18 16:28 blender-mcp.jsonl
+-rw-r--r-- 1 root root     545 Oct 18 16:26 blender.log
+-rw-r--r-- 1 root root       0 Oct 18  2026 files.txt
+-rw-r--r-- 1 root root   19981 Oct 18 16:27 lab-client.jsonl
+-rw-r--r-- 1 root root    3332 Oct 18 16:27 planted-defect.json
+-rw-r--r-- 1 root root       0 Oct 18 16:27 prompt-1.stderr.txt
+-rw-r--r-- 1 root root    8773 Oct 18 16:27 prompt-1.stream.jsonl
+-rw-r--r-- 1 root root       0 Oct 18 16:27 prompt-2.stderr.txt
+-rw-r--r-- 1 root root    9385 Oct 18 16:27 prompt-2.stream.jsonl
+-rw-r--r-- 1 root root       0 Oct 18 16:27 prompt-3.stderr.txt
+-rw-r--r-- 1 root root   12370 Oct 18 16:27 prompt-3.stream.jsonl
+-rw-r--r-- 1 root root       0 Oct 18 16:27 prompt-4.stderr.txt
+-rw-r--r-- 1 root root    9637 Oct 18 16:27 prompt-4.stream.jsonl
+-rw-r--r-- 1 root root       0 Oct 18 16:27 prompt-5.stderr.txt
+-rw-r--r-- 1 root root   12303 Oct 18 16:28 prompt-5.stream.jsonl
+-rw-r--r-- 1 root root       0 Oct 18 16:28 prompt-6.stderr.txt
+-rw-r--r-- 1 root root    9848 Oct 18 16:28 prompt-6.stream.jsonl
+-rw-r--r-- 1 root root 1183994 Oct 18  2026 screen.mp4
+-rwxrwxrwx 1 root root       0 Oct 18 16:26 session-console.txt
+-rw-r--r-- 1 root root      37 Oct 18 16:27 session-id.txt
+-rw-r--r-- 1 root root     938 Oct 18 16:28 timeline.jsonl
+-rw-r--r-- 1 root root       0 Oct 18 16:26 xvfb.log

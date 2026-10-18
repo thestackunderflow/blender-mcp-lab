@@ -1,0 +1,13 @@
+GHOST/Wayland: error: XDG_RUNTIME_DIR is invalid or not set in the environment.
+blender() [0x10e512d]
+blender() [0x10e5293]
+/lib/x86_64-linux-gnu/libwayland-client.so.0(+0xb94a) [0x7473e42cf94a]
+/lib/x86_64-linux-gnu/libwayland-client.so.0(wl_display_connect+0x2d2) [0x7473e42cbb02]
+blender() [0x1a782e7]
+blender() [0x1a577bd]
+blender() [0x16cb341]
+blender() [0x16a27e5]
+blender() [0x75f8eb]
+/lib/x86_64-linux-gnu/libc.so.6(+0x2724a) [0x74740f18224a]
+/lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0x85) [0x74740f182305]
+blender() [0x78994e]

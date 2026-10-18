@@ -1,0 +1,1 @@
+Run A (18 Oct 16:27 UTC): Blender add-on installed but NOT enabled (session.sh used install-addon, not setup), so port 9876 never opened; Claude reported every failure honestly and claimed nothing. Kept as evidence. The good run is claude-run-b.
